@@ -11,9 +11,5 @@
 
 ## Technical Details 
 
-*  Object Oriented and JQuery based.
-
-
-
-
+*  Object Oriented JQuery based.
 
