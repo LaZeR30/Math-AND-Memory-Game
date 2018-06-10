@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-var iNumberToGuess = 0;  var iTotalScore = 0;		var numWins = 0;  		var numLosses = 0;   
+var iNumberToGuess = 0;  var iTotalScore = 0;		var numWins = 0;  	var numLosses = 0;   
 var iRubyRandom = 0;	 var iEmeraldRandom = 0;  	var iTopazRandom = 0 ; 	var iBerylRandom = 0;
 
 var oGame = {
