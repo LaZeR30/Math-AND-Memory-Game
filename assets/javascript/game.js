@@ -12,12 +12,13 @@ var oGame = {
 
 	// initialize game AS WELL AS re-set current game
     play: function() {
+		iTotalScore	= 0;
 		iNumberToGuess = oGame.randomNumber(19, 120) ;
-		iTotalScore	= 0;	
 		$("#myScore").html("Your Total Score is: " + iTotalScore);
 		$("#myNumber").html("The Number to Match is: " + iNumberToGuess);
 		console.log("RESET - iTotalScore=", iTotalScore, "iNumberToGuess=", iNumberToGuess  );
 		
+		//get a DIFFERENT random value for EACH crystal
 		iRubyRandom = oGame.randomNumber(1, 12) ;
 		iEmeraldRandom = oGame.randomNumber(1, 12) ;
 		iTopazRandom = oGame.randomNumber(1, 12) ;
@@ -27,6 +28,7 @@ var oGame = {
 	checkScore: function() {
 		$("#myScore").html("Your Total Score is: " + iTotalScore);
 		
+		// check LOSS
 		if (iTotalScore > iNumberToGuess) {
 			// set $("#comments") color 
 			console.log("LOSS - iTotalScore=", iTotalScore, "iNumberToGuess=", iNumberToGuess  );
@@ -37,6 +39,7 @@ var oGame = {
 			oGame.play();
 		}
 		
+		// check WIN
 		if (iTotalScore == iNumberToGuess) {
 			console.log("WIN - iTotalScore=", iTotalScore, "iNumberToGuess=", iNumberToGuess  );
 			numWins += 1 ;
